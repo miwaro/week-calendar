@@ -1,38 +1,69 @@
+body {
+  background-color: rgb(192, 190, 190);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.button {
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 80px;
+} 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.startingContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.weekContainer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 20px;
+  /* background-color: brown; */
 }
 
-.App-link {
-  color: #61dafb;
+.weekBox {
+  height: 10px;
+  width: 10px;
+  border: 1px solid black;
+  margin: 0 auto;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weekBox:hover {
+  height: 14px;
+  width: 14px;
+}
+
+.alreadyLivedWeekBox {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color:  rgb(255, 255, 255);
+  border: 1px  solid rgb(255, 255, 255);
+}
+
+.alreadyLivedWeekBox:hover {
+  height: 14px;
+  width: 14px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(52, 3px);
+  grid-gap: 1rem;
+  padding: 10px;
+}
+
+.grid-container:nth-child(3n+3) {
+  background-color: red;
 }
